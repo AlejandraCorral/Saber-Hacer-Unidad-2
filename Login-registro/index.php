@@ -31,21 +31,21 @@
                 <!--Formulario de Login y registro-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="" class="formulario__login">
+                    <form action="php/start.php" method="POST" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Entrar</button>
+                        <input type="text" placeholder="Correo Electronico" name="email">
+                        <input type="password" placeholder="Contraseña" name="psw">
+                        <button name="Iniciar">Entrar</button>
                     </form>
 
                     <!--Register-->
-                    <form action="" class="formulario__register">
+                    <form action="php/reg.php" method="POST" class="formulario__register">
                         <h2>Regístrarse</h2>
-                        <input type="text" placeholder="Nombre completo">
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Regístrarse</button>
+                        <input type="text" placeholder="Nombre completo" name="nombre">
+                        <input type="email" placeholder="Correo Electronico" name="email">
+                        <input type="text" placeholder="Usuario" name="user">
+                        <input type="password" placeholder="Contraseña" name="psw">
+                        <button name="Registrar">Regístrarse</button>
                     </form>
                 </div>
             </div>
