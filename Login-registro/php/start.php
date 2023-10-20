@@ -15,13 +15,15 @@
 
     	$query->execute();
 
-    	$count=$query->rowCount();
+    	$row = $query->fetch(); // Obtener la fila resultante
 
-    	if($count)
-    	{
-          $_SESSION['email']=$us;
-          header("Location:../Home.php");
-    	}else{
+        if($row)
+        {
+            $userId = $row['id']; // Asignar el valor de "id" a la variable $userId
+            $_SESSION['email'] = $email; // Asignar el valor de email
+            $_SESSION['user'] = $userId;
+            header("Location: ../Home.php");
+        }else{
     		      // El usuario no existe
       // Alerta a mostrar
 $alerta = "Error en tus credenciales de acceso! :(";

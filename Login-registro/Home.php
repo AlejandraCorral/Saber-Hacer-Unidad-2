@@ -14,7 +14,7 @@ $userId = $_SESSION['user'];
 $conexion = new Conexion();
 
 // Realizar una consulta para obtener información del usuario
-$query = "SELECT * FROM users WHERE user = :userId";
+$query = "SELECT * FROM users WHERE id = :userId";
 $stmt = $conexion->prepare($query);
 $stmt->bindParam(':userId', $userId);
 $stmt->execute();
